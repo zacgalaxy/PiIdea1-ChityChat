@@ -24,7 +24,7 @@ Build a self contained Pipleine for realse Look at the moduela son Git that
 WebRTX or LiveKit intergration 
 
 # General week by week plan:
-Week 1	Build React + Express + Mongo chat app
+Week 1	Build React +typescript + Express + Mongo chat app
 Week 2	Add JWT login system + chat history by user
 Week 3	Switch to WebSocket chat (Socket.IO)
 Week 4	Add CI/CD with GitHub Actions + Docker
