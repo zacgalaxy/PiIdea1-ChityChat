@@ -11,10 +11,28 @@ export default function Login() {
     console.log("Password:", password)
     // TODO: send to backend API
   }
+    const [blocks, setBlocks] = useState([1, 2, 3]);
+
+  
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center ">
+
       <div className="w-full max-w-sm bg-white p-6 rounded-xl shadow-md">
+          <div className="flex flex-wrap">
+              {blocks.map((n) => (
+                <div key={n} className="flex-1 bg-blue-500 text-white p-4 rounded">
+                  {n}
+                </div>
+              ))}
+
+              <button
+                className="ml-4 px-2 py-1 bg-gray-700 text-white rounded"
+                onClick={() => setBlocks([...blocks, blocks.length + 1])}
+              >
+                Add
+              </button>
+           </div>
         <h1 className="text-2xl font-semibold text-center mb-6">Login</h1>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -52,6 +70,6 @@ export default function Login() {
 
         </form>
       </div>
-    </div>
+      </div>
   )
 }
